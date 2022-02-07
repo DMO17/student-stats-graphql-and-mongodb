@@ -1,0 +1,30 @@
+{
+  "name": "student-stats-graphql-and-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DMO17/student-stats-graphql-and-mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DMO17/student-stats-graphql-and-mongodb/issues"
+  },
+  "homepage": "https://github.com/DMO17/student-stats-graphql-and-mongodb#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.2",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
