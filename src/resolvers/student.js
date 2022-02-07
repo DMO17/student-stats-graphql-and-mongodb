@@ -10,6 +10,11 @@ const student = async (_, { studentId }) => {
 
   return student;
 };
-const createStudent = () => {};
+
+const createStudent = async (_, { input }) => {
+  const createStudent = await Student.create(input);
+
+  return createStudent;
+};
 
 module.exports = { students, student, createStudent };

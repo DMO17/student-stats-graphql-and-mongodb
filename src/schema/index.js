@@ -2,7 +2,6 @@ const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Student {
-    _id: ID
     firstName: String!
     lastName: String!
     githubUrl: String!
@@ -48,8 +47,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createStudent(input: StudentInput): Student
-    createCourse(input: CourseInput): Course
+    createStudent(input: StudentInput!): Student
+    createCourse(input: CourseInput!): Course
   }
 `;
 
