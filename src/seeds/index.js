@@ -38,6 +38,8 @@ const init = async () => {
     console.log("[INFO]: Courses data has been seeded in the mongoDB");
 
     await mongoose.disconnect();
+
+    console.log("[INFO]: Successfully dis-connected from the database");
   } catch (error) {
     console.log(
       `[Error]: Connection to the Database has failed | ${error.message}`
