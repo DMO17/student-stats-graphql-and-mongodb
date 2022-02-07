@@ -10,11 +10,13 @@ const typeDefs = gql`
   }
 
   type Assignment {
+    _id: ID
     assignmentName: String
     score: Int
   }
 
   type Course {
+    _id: ID
     courseName: String!
     inPerson: Boolean!
     students: [Student]

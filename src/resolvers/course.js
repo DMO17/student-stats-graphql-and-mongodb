@@ -1,33 +1,14 @@
-const courses = () => {
-  return [
-    {
-      courseName: "Full Stack Coding Bootcamp",
-      inPerson: false,
-      students: [],
-    },
-    {
-      courseName: "AI Coding Bootcamp",
-      inPerson: true,
-      students: [],
-    },
-    {
-      courseName: "MatLab and Simulink",
-      inPerson: true,
-      students: [],
-    },
-    {
-      courseName: "3D CAD DRAWING",
-      inPerson: true,
-      students: [],
-    },
-  ];
+const { Course } = require("../models");
+
+const courses = async () => {
+  const courses = await Course.find({}).populate("students");
+
+  return courses;
 };
-const course = () => {
-  return {
-    courseName: "Full Stack Coding Bootcamp",
-    inPerson: false,
-    students: [],
-  };
+const course = async (_, { coursesId }) => {
+  const course = await Course.findById(coursesId).populate("students");
+
+  return course;
 };
 const createCourse = () => {};
 
