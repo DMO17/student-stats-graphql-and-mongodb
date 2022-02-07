@@ -8,7 +8,6 @@ const resolvers = {
     courses,
     course,
   },
-
   Mutation: {
     createStudent,
     createCourse,

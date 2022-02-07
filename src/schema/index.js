@@ -24,7 +24,6 @@ const typeDefs = gql`
     student(studentId: ID!): Student
     courses: [Course]
     course(coursesId: ID!): Course
-
   }
 
   input StudentInput {
@@ -46,9 +45,32 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createStudent(input: StudentInput): Student,
-    createCourse(input: CourseInput)
+    createStudent(input: StudentInput): Student
+    createCourse(input: CourseInput): Course
   }
 `;
 
 module.exports = typeDefs;
+
+// input StudentInput {
+//   firstName: String!
+//   lastName: String!
+//   githubUrl: String!
+//   assignments: [AssignmentInput]
+// }
+
+// input AssignmentInput {
+//   assignmentName: String!
+//   score: Int!
+// }
+
+// input CourseInput {
+//   courseName: String!
+//   inPerson: Boolean!
+//   students: [StudentInput]
+// }
+
+// type Mutation {
+//   createStudent(input: StudentInput): Student,
+//   createCourse(input: CourseInput)
+// }
