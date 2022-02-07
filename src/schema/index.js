@@ -2,6 +2,7 @@ const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Student {
+    _id: ID
     firstName: String!
     lastName: String!
     githubUrl: String!

@@ -10,6 +10,10 @@ const course = async (_, { coursesId }) => {
 
   return course;
 };
-const createCourse = () => {};
+const createCourse = async (_, { input }) => {
+  const createCourse = await Course.create(input);
+
+  return createCourse;
+};
 
 module.exports = { courses, course, createCourse };
