@@ -51,6 +51,9 @@ const typeDefs = gql`
     createStudent(input: StudentInput!): Student
     updateStudent(input: StudentInput!, studentId: ID!): Student
     createCourse(input: CourseInput!): Course
+    updateCourse(input: CourseInput!, coursesId: ID!): Course
+    deleteStudent(studentId: ID!): Student
+    deleteCourse(coursesId: ID!): Course
   }
 `;
 

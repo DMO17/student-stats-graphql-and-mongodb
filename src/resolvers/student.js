@@ -22,5 +22,16 @@ const updateStudent = async (_, { input, studentId }) => {
 
   return updatedStudentInfo;
 };
+const deleteStudent = async (_, { studentId }) => {
+  const deleteStudent = await Student.findByIdAndDelete(studentId);
 
-module.exports = { students, student, createStudent, updateStudent };
+  return deleteStudent;
+};
+
+module.exports = {
+  students,
+  student,
+  createStudent,
+  updateStudent,
+  deleteStudent,
+};

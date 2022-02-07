@@ -1,9 +1,16 @@
-const { courses, course, createCourse } = require("./course");
+const {
+  courses,
+  course,
+  createCourse,
+  updateCourse,
+  deleteCourse,
+} = require("./course");
 const {
   students,
   student,
   createStudent,
   updateStudent,
+  deleteStudent,
 } = require("./student");
 
 const resolvers = {
@@ -18,6 +25,9 @@ const resolvers = {
     createStudent,
     createCourse,
     updateStudent,
+    updateCourse,
+    deleteStudent,
+    deleteCourse,
   },
 };
 

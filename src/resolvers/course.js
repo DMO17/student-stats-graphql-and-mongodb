@@ -15,5 +15,16 @@ const createCourse = async (_, { input }) => {
 
   return createCourse;
 };
+const updateCourse = async (_, { input, coursesId }) => {
+  const updateCourse = await Course.findByIdAndUpdate(coursesId, input);
 
-module.exports = { courses, course, createCourse };
+  return updateCourse;
+};
+
+const deleteCourse = async (_, { coursesId }) => {
+  const deleteCourse = await Course.findByIdAndDelete(coursesId);
+
+  return deleteCourse;
+};
+
+module.exports = { courses, course, createCourse, updateCourse, deleteCourse };
