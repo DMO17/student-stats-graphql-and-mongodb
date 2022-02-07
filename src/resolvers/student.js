@@ -17,4 +17,10 @@ const createStudent = async (_, { input }) => {
   return createStudent;
 };
 
-module.exports = { students, student, createStudent };
+const updateStudent = async (_, { input, studentId }) => {
+  const updatedStudentInfo = await Student.findByIdAndUpdate(studentId, input);
+
+  return updatedStudentInfo;
+};
+
+module.exports = { students, student, createStudent, updateStudent };

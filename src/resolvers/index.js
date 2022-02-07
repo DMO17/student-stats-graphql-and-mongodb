@@ -1,5 +1,10 @@
 const { courses, course, createCourse } = require("./course");
-const { students, student, createStudent } = require("./student");
+const {
+  students,
+  student,
+  createStudent,
+  updateStudent,
+} = require("./student");
 
 const resolvers = {
   Query: {
@@ -12,6 +17,7 @@ const resolvers = {
   Mutation: {
     createStudent,
     createCourse,
+    updateStudent,
   },
 };
 
